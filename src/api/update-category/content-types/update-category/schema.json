@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "update_categories",
+  "info": {
+    "singularName": "update-category",
+    "pluralName": "update-categories",
+    "displayName": "updateCategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "updates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::update.update",
+      "mappedBy": "update_category"
+    }
+  }
+}

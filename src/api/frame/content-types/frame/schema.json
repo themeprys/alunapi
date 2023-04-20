@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frames",
+  "info": {
+    "singularName": "frame",
+    "pluralName": "frames",
+    "displayName": "frame",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "audio": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "mood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mood.mood",
+      "inversedBy": "frames"
+    }
+  }
+}
