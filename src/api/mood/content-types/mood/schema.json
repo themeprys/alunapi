@@ -39,6 +39,25 @@
       "relation": "oneToMany",
       "target": "api::frame.frame",
       "mappedBy": "mood"
+    },
+    "teaser": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "howItWorks": {
+      "type": "richtext"
+    },
+    "credits": {
+      "type": "richtext"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
